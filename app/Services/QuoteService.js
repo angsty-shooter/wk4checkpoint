@@ -11,7 +11,7 @@ class QuoteService{
     async getQuote(){
         try {
             const qu = await api.get("quotes")
-            ProxyState.wallpaper = qu.data
+            ProxyState.quotes = qu.data
         } catch (error) {
             console.log(error)
         }

@@ -3,7 +3,9 @@ import { quoteService } from "../Services/QuoteService.js";
 
 
 function _draw(){
-
+    let quote = ProxyState.quotes
+    
+    document.getElementById("quoteDisplay").innerText = 
 }
 
 
