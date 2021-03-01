@@ -7,8 +7,7 @@ class WeatherService{
     async getWeather(){
         try {
             const wet = await api.get("weather")
-            console.log(wet)
-            ProxyState.quotes = new Weather(wet.data)
+            ProxyState.weather = new Weather(wet.data)
         } catch (error) {
             console.log(error)
         }
