@@ -7,7 +7,7 @@ class TodoService {
 
     async getTask(){
         try{
-          const res = await doApi.get('tasks')
+          const res = await doApi.get()
           ProxyState.tasks = res.data.map(rawTaskData => new Todo(rawTaskData))
         } catch (error) {
           console.error(error)
@@ -16,14 +16,14 @@ class TodoService {
       
     async createTask(rawTask){
         try {
-            const res = await doApi.post('tasks', rawTask)
+            const res = await doApi.post('', rawTask)
             ProxyState.tasks = [...ProxyState.tasks, new Todo(res.data)]
         } catch (error) {
             console.error(error)
         }
     }
 
-    async deleteCar(id) {
+    async deleteTask(id) {
         try{
           const res = await doApi.delete(`tasks/${id}`)
           this.getTask()

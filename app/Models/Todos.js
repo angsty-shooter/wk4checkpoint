@@ -3,16 +3,17 @@ import { ProxyState } from "../AppState.js";
 
 export default class Todo{
 
-    constructor({title, id = generateId()}){
-        this.title = title,
-        this.id = id
+    constructor({description, _id, completed}){
+        this.description = description,
+        this._id = _id,
+        this.completed = completed || false
     }
 
     get Template(){
         return /*html*/`
-        <span>${this.title}</span>
-        <i class="fa fa-trash fa-2x text-danger d-flex align-self-end pointer" onclick="app.carsController.deleteTask('${this.id}')" aria-hidden="true"></i>
-        <i class="fa fa-check fa-2x text-danger d-flex align-self-end pointer" onclick="app.carsController.checkTask('${this.id}')" aria-hidden="true"></i>
+        <span>${this.description}</span>
+        <i class="fa fa-trash fa-2x text-danger d-flex align-self-end pointer" onclick="app.carsController.deleteTask('${this._id}')" aria-hidden="true"></i>
+        <i class="fa fa-check fa-2x text-danger d-flex align-self-end pointer" onclick="app.carsController.checkTask('${this._id}')" aria-hidden="true"></i>
         `
     }
 }

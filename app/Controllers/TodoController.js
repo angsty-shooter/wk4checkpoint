@@ -24,13 +24,14 @@ export default class TodoController{
         console.log(form)
         
         let rawTask = {
-          title: form.title.value,
+          title: form.taskForm.value,
         }
         console.log(rawTask)
         todoService.createTask(rawTask)
       }
 
-    //   deleteTask(id){
-    //     console.log(id)
-    //     todoService.deleteTask(id)
+      deleteTask(id){
+        console.log(id)
+        todoService.deleteTask(id)
+      }
 }
