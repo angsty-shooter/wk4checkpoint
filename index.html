@@ -29,7 +29,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-2.5 ml-5">
-                    <form class="bg-dark rounded" id="formElement" style="" onsubmit="app.todoController.createTask()" >
+                    <form class="bg-dark rounded" id="formElement" style="" onsubmit="app.todoController.createTask(event)" >
                         <div class="form-group">
                         <input type="text" name="taskForm" class="bg-dark rounded" placeholder="Todo" required minlength="3" maxlength="15">
                         <button class="btn btn-outline-info" type="submit">+</button>
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="row" id="taskRow">
-                
+
             </div>
         </div>
     </main>

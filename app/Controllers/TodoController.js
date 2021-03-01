@@ -1,5 +1,5 @@
-import { ProxyState } from "../AppState";
-import { todoService } from "../Services/TodoService";
+import { ProxyState } from "../AppState.js";
+import { todoService } from "../Services/TodoService.js";
 
 
 function _draw(){
@@ -7,14 +7,14 @@ function _draw(){
     let template = ""
     task.forEach(t=> template += t.Template)
     // console.log(template)
-    document.getElementById('').innerHTML = template
+    document.getElementById('taskRow').innerHTML = template
 }
 
 export default class TodoController{
 
     constructor(){
         _draw()
-        ProxyState.on("taskRow", _draw)
+        ProxyState.on("tasks", _draw)
     }
 
     createTask(event){
@@ -29,4 +29,8 @@ export default class TodoController{
         console.log(rawTask)
         todoService.createTask(rawTask)
       }
+
+    //   deleteTask(id){
+    //     console.log(id)
+    //     todoService.deleteTask(id)
 }
