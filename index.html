@@ -28,12 +28,12 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-2">
-                    <button class="btn btn-info">ToDo</button>
-                    <form class="bg-dark" id="formElement" style="display: none" onsubmit="" >
+                <div class="col-2.5 ml-5">
+                    <form class="bg-dark rounded" id="formElement" style="" onsubmit="" >
                         <div class="form-group">
-                        <input type="text" name="taskForm" placeholder="Create Task" required minlength="3" maxlength="15">
+                        <input type="text" name="taskForm" class="bg-dark rounded" placeholder="Todo" required minlength="3" maxlength="15">
                         <button class="btn btn-outline-info" type="submit">+</button>
+                        <p class="text-light">Completed: <span id="complete">0</span></p>
                         </div>
                     </form>
                 </div>
