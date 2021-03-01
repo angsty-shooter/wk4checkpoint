@@ -31,6 +31,15 @@ class TodoService {
           console.error(error)
         }
       }
+
+      async checkTask() {
+          try {
+              const res = await doApi.post()
+              
+          } catch (error) {
+              
+          }
+      }
 }
 
 export const todoService = new TodoService()
