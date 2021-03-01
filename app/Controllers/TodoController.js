@@ -24,7 +24,7 @@ export default class TodoController{
         console.log(form)
         
         let rawTask = {
-          title: form.taskForm.value,
+          description: form.taskForm.value,
         }
         console.log(rawTask)
         todoService.createTask(rawTask)
