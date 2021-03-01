@@ -1,17 +1,15 @@
 import { ProxyState } from "../AppState.js";
+import Quote from "../Models/Quote.js";
 import { api } from "./AxiosService.js";
 
 
 class QuoteService{
 
-    constructor(){
-
-    }
-
     async getQuote(){
         try {
             const qu = await api.get("quotes")
-            ProxyState.quotes = qu.data
+            console.log(qu)
+            ProxyState.quotes = new Quote(qu.data)
         } catch (error) {
             console.log(error)
         }
