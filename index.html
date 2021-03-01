@@ -28,7 +28,15 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col"></div>
+                <div class="col-2">
+                    <button class="btn btn-info">ToDo</button>
+                    <form class="bg-dark" id="formElement" style="display: none" onsubmit="" >
+                        <div class="form-group">
+                        <input type="text" name="taskForm" placeholder="Create Task" required minlength="3" maxlength="15">
+                        <button class="btn btn-outline-info" type="submit">+</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>

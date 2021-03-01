@@ -6,6 +6,7 @@ class App {
   imageController = new ImageController();
   quoteController = new QuoteController();
   weatherController = new WeatherController();
+  
 }
 
 window["app"] = new App();
