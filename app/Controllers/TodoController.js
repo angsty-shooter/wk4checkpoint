@@ -14,7 +14,6 @@ export default class TodoController{
 
     constructor(){
         this.getTask()
-        
         ProxyState.on("tasks", _draw)
         _draw()
     }
@@ -34,7 +33,6 @@ export default class TodoController{
       deleteTask(_id){
         console.log(_id)
         todoService.deleteTask(_id)
-        this.getTask()
-        _draw
+        // this.getTask()
       }
 }

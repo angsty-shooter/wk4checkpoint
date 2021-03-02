@@ -26,6 +26,7 @@ class TodoService {
     async deleteTask(_id) {
         try{
           await doApi.delete(`${_id}`)
+          this.getTask()
         } catch (error) {
           console.error(error)
         }
