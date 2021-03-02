@@ -23,18 +23,15 @@ class TodoService {
         }
     }
 
-    async deleteTask(id) {
-      debugger
+    async deleteTask(_id) {
         try{
-          const res = await doApi.delete(`${id}`)
-          this.getTask()
-          //console.log(this.getTask)
+          await doApi.delete(`${_id}`)
         } catch (error) {
           console.error(error)
         }
       }
 
-      async checkTask(id) {
+      async checkTask(_id) {
           try {
               const res = await doApi.put()
               

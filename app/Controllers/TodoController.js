@@ -26,8 +26,8 @@ export default class TodoController{
         todoService.createTask(rawTask)
       }
 
-      deleteTask(id){
+      deleteTask(_id){
         //console.log(id)
-        todoService.deleteTask(id)
+        todoService.deleteTask(_id)
       }
 }
