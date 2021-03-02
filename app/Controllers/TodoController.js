@@ -13,10 +13,15 @@ function _draw(){
 export default class TodoController{
 
     constructor(){
-        _draw()
+        this.getTask()
+        
         ProxyState.on("tasks", _draw)
+        _draw()
     }
 
+    getTask(){
+      todoService.getTask()
+    }
     createTask(event){
         event.preventDefault();
         let form = event.target
@@ -27,7 +32,9 @@ export default class TodoController{
       }
 
       deleteTask(_id){
-        //console.log(id)
+        console.log(_id)
         todoService.deleteTask(_id)
+        this.getTask()
+        _draw
       }
 }
