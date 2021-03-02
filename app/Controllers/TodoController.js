@@ -6,7 +6,7 @@ function _draw(){
     let task = ProxyState.tasks
     let template = ""
     task.forEach(t=> template += t.Template)
-    // console.log(template)
+    //console.log(template)
     document.getElementById('taskRow').innerHTML = template
 }
 
@@ -19,19 +19,15 @@ export default class TodoController{
 
     createTask(event){
         event.preventDefault();
-        console.log('creating task')
         let form = event.target
-        console.log(form)
-        
         let rawTask = {
           description: form.taskForm.value,
         }
-        console.log(rawTask)
         todoService.createTask(rawTask)
       }
 
       deleteTask(id){
-        console.log(id)
+        //console.log(id)
         todoService.deleteTask(id)
       }
 }

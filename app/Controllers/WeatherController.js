@@ -3,7 +3,6 @@ import { weatherService } from "../Services/WeatherService.js";
 
 
 function _draw(){
-    console.log(ProxyState.weather)
     document.getElementById("weatherDisplay").innerHTML = `${ProxyState.weather.Template}`
 }
 
